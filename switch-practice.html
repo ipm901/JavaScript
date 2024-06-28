@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>switch-practice</title>
+    <script>
+
+   /* alert(`Реализовать калькулятор. Пользователь вводит 2 числа и
+знак (+ - * /). В зависимости от введенного знака решить
+пример и вывести результат.`);
+
+let x = parseInt(prompt('Введите первое число:'));
+let y = parseInt(prompt('Введите второе число:'));
+let operator = prompt('Enter operator')
+let result;
+switch(operator){
+    case '+':
+        result = x + y;
+        break;
+    case '-':
+        result = x - y;
+        break;
+    case '*':
+        result = x * y;
+        break;
+    case '/':
+        result = x / y;
+        break;
+}
+    
+result = ` Результат ${x} ${operator} ${y} = ${result}` ;
+alert(result);
+*/
+
+/*
+alert(`Запросить 2 числа и вывести большее из них.`);
+let num1 = prompt('Введите первое число:')
+let num2 = prompt('Введите второе число:')
+if (num1 > num2){
+    alert('Большее число ' + num1);
+}
+else if (num2 > num1){
+    alert('Большее число ' + num2);
+}
+else {
+    alert('Числа равны');
+}*/
+
+/*
+
+alert(`задание`);
+let input = parseInt(prompt('Введите число:'));
+let output = input > 0 ? 'положительное число' : 'Не положительное число';
+alert(output);
+*/
+
+
+/*
+alert(`Запросить 2 числа и вывести большее из них.`);
+let num1 = parseInt(prompt('Введите 1 число:'));
+let num2 = parseInt(prompt('Введите 2 число:'));
+
+let output = num1 > num2 ? num1 : num1 < num2 ? num2 : 'Оба числа равны';
+alert(output);
+*/
+/*
+alert(`Запросить 1 число и проверить, оно кратно 5 или нет.`)
+let num = prompt('Введите число');
+let output = (num % 5 === 0) ? 'Число кратное 5' : 'Число не кратное 5';
+alert(output);
+*/
+
+let comfirmed = confirm('Сколько раз вывести знак # ?');
+let n = 0;
+let i = 0;
+let text = '';
+while (comfirmed) {
+    n = parseInt(prompt('Сколько раз вывести знак #'));
+    while (i < n){
+        text = text +'#';
+        i++;
+    }
+  alert(text); 
+  comfirmed = confirm ('Вы хотите продолжить?');
+}
+    
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
