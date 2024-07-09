@@ -5,55 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script>
-    /*    
-        function User(firstName, lastName, city, age){
-            this.firstName = firstName;
-            this.lastName = lastName;
-            this.city = city;
-            this.age = age;
-        }
-        let user = new User('Anne', 'Tompson', 30, 'Novosibirsk');
-    /*   ------------------------------------------------------------ 
-let user = {     
-  firstName: 'John', 
-  lastName: 'Adans',
-  age: 30,
-  city: 'Novosibirsk',
-  adres: 'Strit',
-  floor: 'Men'      
-};document.write(`${user.firstName} ${user.age} ${user. city} ${user.lastName} ${user.adres} ${user.floor}`);
-   */
-
-   function PrintMachine(fontColor, fontFamily, fontSize){
+        
+function PrintMachine(fontColor, fontFamily, fontSize){
     this.fontSize = fontSize;
     this.fontColor = fontColor;
     this.fontFamily = fontFamily;
     this.print = function(text){
-
-    let output = `<p style = "color: ${this.fontColor}; 
-     font-family: ${this.fontFamily};
-     font-size: ${this.fontSize}px"> 
-     ${text}
-     </p>`;
-    document.write(output);
-    
+        let output = `
+            <p style="color: ${this.fontColor}; font-family: ${this.fontFamily}; font-size: ${this.fontSize}px;">
+                ${text}
+            </p>
+        `;
+        document.write(output);
+    };
 }
 
- /*
-    this.getName = function(text){
-        let name = `${this.fontSize} ${this.fontColor}`;
-return name;
-*/
-    }
-   
-   let printMachine = new PrintMachine('green', 'Arial, 50');
-   
-  
-   document.write(`${printMachine.fontColor} ${printMachine.fontFamily} ${printMachine.fontSize}`);
-   
-  
+let printer = new PrintMachine("red", "Arial", 30);
+printer.print("Пример текста для печати");
     </script>
-
 </head>
 <body>
     
