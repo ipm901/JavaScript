@@ -24,13 +24,19 @@ let user = {
 };document.write(`${user.firstName} ${user.age} ${user. city} ${user.lastName} ${user.adres} ${user.floor}`);
    */
 
-   function PrintMachine(fontSize, fontColor, fontFamily){
+   function PrintMachine(fontColor, fontFamily, fontSize){
     this.fontSize = fontSize;
     this.fontColor = fontColor;
     this.fontFamily = fontFamily;
     this.print = function(text){
-    let output = `<p style = 'color: green; font-size: 50px; font-family: Georgia'> ${text}</p>`;
+
+    let output = `<p style = "color: ${this.fontColor}; 
+     font-family: ${this.fontFamily};
+     font-size: ${this.fontSize}px"> 
+     ${text}
+     </p>`;
     document.write(output);
+    
 }
 
  /*
@@ -40,13 +46,10 @@ return name;
 */
     }
    
-   let printMachine = new PrintMachine (50, 'green', 'font-family');
+   let printMachine = new PrintMachine('green', 'Arial, 50');
    
-   printMachine.print(50);
-   printMachine.print('fontColor');
-   printMachine.print('Georgi');
-/*
-   document.write(`${printMachine.fontSize} ${printMachine.fontColor} ${printMachine.fontFamily} `);*/
+  
+   document.write(`${printMachine.fontColor} ${printMachine.fontFamily} ${printMachine.fontSize}`);
    
   
     </script>
